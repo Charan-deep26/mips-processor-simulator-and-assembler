@@ -1,0 +1,9 @@
+lw $t0, 4($zero)
+addi $t1, $zero, 1
+LOOP:
+beq $t0, $zero, DONE
+mul $t1, $t1, $t0
+addi $t0, $t0, -1
+j LOOP
+DONE:
+sw $t1, 0($zero)
